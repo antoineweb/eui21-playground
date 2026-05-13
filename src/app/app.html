@@ -17,6 +17,13 @@
         (click)="show('slide-toggle')">
         Slide toggle
       </button>
+      <button
+        type="button"
+        class="tab"
+        [class.tab--active]="page() === 'field-states'"
+        (click)="show('field-states')">
+        Field states
+      </button>
     </nav>
   </header>
 
@@ -24,6 +31,7 @@
     @switch (page()) {
       @case ('button') { <ButtonShowcase /> }
       @case ('slide-toggle') { <Default /> }
+      @case ('field-states') { <FieldStates /> }
     }
   </section>
 </main>

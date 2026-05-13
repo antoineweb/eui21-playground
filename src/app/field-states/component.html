@@ -1,0 +1,108 @@
+<article class="showcase">
+  <header>
+    <h2>Field states — editable · read-only · disabled · both</h2>
+    <p>
+      Quick UX reminder:
+      <strong>readonly</strong> = value visible, focusable, copyable, submitted with the form.
+      <strong>disabled</strong> = greyed out, not focusable, excluded from submission.
+    </p>
+  </header>
+
+  <!-- ────────────────────────────  TEXT INPUT  ──────────────────────────── -->
+  <section>
+    <h3>Text input — <code>input[euiInputText]</code></h3>
+    <div class="grid">
+      <div class="field">
+        <label euiLabel for="t1">Editable</label>
+        <input euiInputText id="t1" [ngModel]="sample" />
+        <small>typing allowed · focusable</small>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="t2">Read-only</label>
+        <input euiInputText id="t2" [ngModel]="sample" readonly />
+        <small>focusable · copyable · submitted</small>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="t3" euiDisabled>Disabled</label>
+        <input euiInputText id="t3" [ngModel]="sample" disabled />
+        <small>not focusable · not submitted</small>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="t4" euiDisabled>Read-only + Disabled</label>
+        <input euiInputText id="t4" [ngModel]="sample" readonly disabled />
+        <small>disabled wins visually</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  TEXTAREA  ──────────────────────────── -->
+  <section>
+    <h3>Textarea — <code>textarea[euiTextArea]</code></h3>
+    <div class="grid">
+      <div class="field">
+        <label euiLabel for="ta1">Editable</label>
+        <textarea euiTextArea id="ta1" rows="3" [ngModel]="sampleLong"></textarea>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="ta2">Read-only</label>
+        <textarea euiTextArea id="ta2" rows="3" [ngModel]="sampleLong" readonly></textarea>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="ta3" euiDisabled>Disabled</label>
+        <textarea euiTextArea id="ta3" rows="3" [ngModel]="sampleLong" disabled></textarea>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="ta4" euiDisabled>Read-only + Disabled</label>
+        <textarea euiTextArea id="ta4" rows="3" [ngModel]="sampleLong" readonly disabled></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  SELECT  ──────────────────────────── -->
+  <section>
+    <h3>Select — <code>select[euiSelect]</code></h3>
+    <p class="hint">
+      Native <code>&lt;select&gt;</code> only honours <code>disabled</code>; the read-only column shows the
+      conventional pattern (clone of the editable value, no chevron) since HTML doesn't expose
+      <code>readonly</code> on selects.
+    </p>
+    <div class="grid">
+      <div class="field">
+        <label euiLabel for="s1">Editable</label>
+        <select euiSelect id="s1" [ngModel]="country">
+          <option value="fr">France</option>
+          <option value="be">Belgique</option>
+          <option value="de">Allemagne</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="s2">Read-only (visual)</label>
+        <input euiInputText id="s2" [ngModel]="'France'" readonly />
+        <small>render the value as a read-only text field</small>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="s3" euiDisabled>Disabled</label>
+        <select euiSelect id="s3" [ngModel]="country" disabled>
+          <option value="fr">France</option>
+          <option value="be">Belgique</option>
+          <option value="de">Allemagne</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label euiLabel for="s4" euiDisabled>Read-only + Disabled</label>
+        <select euiSelect id="s4" [ngModel]="country" disabled>
+          <option value="fr">France</option>
+        </select>
+      </div>
+    </div>
+  </section>
+</article>
