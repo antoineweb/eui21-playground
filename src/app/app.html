@@ -1,0 +1,29 @@
+<main class="page">
+  <header class="page__header">
+    <h1>EUI21 component playground</h1>
+    <p>Live source of truth for components used in your design system.</p>
+    <nav class="tabs">
+      <button
+        type="button"
+        class="tab"
+        [class.tab--active]="page() === 'button'"
+        (click)="show('button')">
+        Button
+      </button>
+      <button
+        type="button"
+        class="tab"
+        [class.tab--active]="page() === 'slide-toggle'"
+        (click)="show('slide-toggle')">
+        Slide toggle
+      </button>
+    </nav>
+  </header>
+
+  <section class="demo">
+    @switch (page()) {
+      @case ('button') { <ButtonShowcase /> }
+      @case ('slide-toggle') { <Default /> }
+    }
+  </section>
+</main>

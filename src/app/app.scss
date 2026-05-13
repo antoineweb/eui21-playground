@@ -1,0 +1,163 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #1f2937;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.page__header {
+  margin-bottom: 24px;
+}
+
+.page__header h1 {
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+}
+
+.page__header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 8px 14px;
+  margin-bottom: -1px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #111827;
+}
+
+.tab--active {
+  color: #1f4ed8;
+  border-bottom-color: #1f4ed8;
+  font-weight: 500;
+}
+
+.demo {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+.demo h2 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.row + .row {
+  margin-top: 12px;
+}
+
+.state {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.form-grid label:last-child {
+  border-bottom: none;
+}
+
+.form-grid span {
+  font-weight: 500;
+}
+
+.btn {
+  background: #1f4ed8;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+.value {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin: 12px 0 0;
+  overflow-x: auto;
+}
+
+.log {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+.log li {
+  padding: 4px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.log li:last-child {
+  border-bottom: none;
+}
+
+.muted {
+  margin: 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+code {
+  background: #eef2ff;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}

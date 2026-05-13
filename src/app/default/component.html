@@ -1,0 +1,42 @@
+<div class="default-demo">
+  <h2>Default <code>&lt;eui-slide-toggle&gt;</code></h2>
+
+  <div class="row">
+    <eui-slide-toggle ariaLabel="Default toggle" />
+    <span>default</span>
+  </div>
+
+  <div class="row">
+    <eui-slide-toggle [isChecked]="true" ariaLabel="Default toggle (on)" />
+    <span>default, isChecked=true</span>
+  </div>
+
+  <div class="row">
+    <eui-slide-toggle [isChecked]="true" disabled ariaLabel="Disabled toggle" />
+    <span>disabled</span>
+  </div>
+
+  <div class="row">
+    <eui-slide-toggle
+      [isChecked]="true"
+      iconSvgNameOn="check"
+      iconSvgNameOff="close"
+      ariaLabel="Toggle with icons" />
+    <span>with icons</span>
+  </div>
+
+  <div class="row variants">
+    <eui-slide-toggle [isChecked]="true" euiPrimary ariaLabel="primary" />
+    <eui-slide-toggle [isChecked]="true" euiInfo    ariaLabel="info" />
+    <eui-slide-toggle [isChecked]="true" euiSuccess ariaLabel="success" />
+    <eui-slide-toggle [isChecked]="true" euiWarning ariaLabel="warning" />
+    <eui-slide-toggle [isChecked]="true" euiDanger  ariaLabel="danger" />
+  </div>
+
+  <div class="row variants">
+    <eui-slide-toggle [isChecked]="true" euiSuccess euiSizeS  ariaLabel="size s" />
+    <eui-slide-toggle [isChecked]="true" euiSuccess euiSizeM  ariaLabel="size m" />
+    <eui-slide-toggle [isChecked]="true" euiSuccess euiSizeL  ariaLabel="size l" />
+    <eui-slide-toggle [isChecked]="true" euiSuccess euiSizeXL ariaLabel="size xl" />
+  </div>
+</div>

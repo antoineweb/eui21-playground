@@ -1,0 +1,117 @@
+<article class="showcase">
+  <header>
+    <h2><code>&lt;button euiButton&gt;</code> — source of truth</h2>
+    <p>
+      Selector: <code>button[euiButton], a[euiButton]</code> · Module:
+      <code>&#64;eui/components/eui-button</code> · Export: <code>EUI_BUTTON</code>
+    </p>
+  </header>
+
+  <!-- ────────────────────────────  COLOR VARIANTS  ──────────────────────────── -->
+  <section>
+    <h3>Color variants</h3>
+    <p class="hint">One BaseStatesDirective attribute per variant. Combine at most one.</p>
+    <div class="grid">
+      <button euiButton                (buttonClick)="onClick('default')">Default</button>
+      <button euiButton euiPrimary     (buttonClick)="onClick('primary')">Primary</button>
+      <button euiButton euiBranding    (buttonClick)="onClick('branding')">Branding</button>
+      <button euiButton euiSecondary   (buttonClick)="onClick('secondary')">Secondary</button>
+      <button euiButton euiSuccess     (buttonClick)="onClick('success')">Success</button>
+      <button euiButton euiInfo        (buttonClick)="onClick('info')">Info</button>
+      <button euiButton euiWarning     (buttonClick)="onClick('warning')">Warning</button>
+      <button euiButton euiDanger      (buttonClick)="onClick('danger')">Danger</button>
+      <button euiButton euiInverse     (buttonClick)="onClick('inverse')">Inverse</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  OUTLINE  ──────────────────────────── -->
+  <section>
+    <h3>Outline (ghost) style</h3>
+    <p class="hint">Add <code>euiOutline</code> to any color variant.</p>
+    <div class="grid">
+      <button euiButton euiOutline>Default</button>
+      <button euiButton euiOutline euiPrimary>Primary</button>
+      <button euiButton euiOutline euiSecondary>Secondary</button>
+      <button euiButton euiOutline euiSuccess>Success</button>
+      <button euiButton euiOutline euiDanger>Danger</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  SIZES  ──────────────────────────── -->
+  <section>
+    <h3>Sizes</h3>
+    <p class="hint">XS · S · M (default) · L. Use one per button.</p>
+    <div class="grid grid--baseline">
+      <button euiButton euiPrimary euiSizeXS>Extra small</button>
+      <button euiButton euiPrimary euiSizeS>Small</button>
+      <button euiButton euiPrimary euiSizeM>Medium</button>
+      <button euiButton euiPrimary euiSizeL>Large</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  SHAPE MODIFIERS  ──────────────────────────── -->
+  <section>
+    <h3>Shape &amp; layout modifiers</h3>
+    <div class="grid">
+      <button euiButton euiPrimary euiRounded>euiRounded</button>
+      <button euiButton euiPrimary isCompact>isCompact</button>
+      <button euiButton euiPrimary euiResponsive>euiResponsive</button>
+      <button euiButton euiPrimary euiLineWrap style="max-width:140px">
+        euiLineWrap — text wraps when needed
+      </button>
+    </div>
+    <h4>euiBlockButton (full width)</h4>
+    <button euiButton euiPrimary euiBlockButton>euiBlockButton</button>
+  </section>
+
+  <!-- ────────────────────────────  SPECIAL ROLES  ──────────────────────────── -->
+  <section>
+    <h3>Special roles</h3>
+    <div class="grid">
+      <button euiButton euiBasicButton>euiBasicButton</button>
+      <button euiButton euiCTAButton>euiCTAButton</button>
+      <button euiButton euiAvatarButton>euiAvatarButton</button>
+      <button euiButton euiIconButton aria-label="Icon-only">★</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  STATES  ──────────────────────────── -->
+  <section>
+    <h3>States</h3>
+    <div class="grid">
+      <button euiButton euiPrimary>Default</button>
+      <button euiButton euiPrimary [isChecked]="true">isChecked</button>
+      <button euiButton euiPrimary [euiDisabled]="true">euiDisabled</button>
+      <button euiButton euiPrimary hasNoFocusRing>hasNoFocusRing</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  CONTENT ALIGNMENT  ──────────────────────────── -->
+  <section>
+    <h3>Content alignment within button</h3>
+    <p class="hint">Combine with <code>euiBlockButton</code> to see <code>euiStart</code> / <code>euiEnd</code> in action.</p>
+    <div class="stack">
+      <button euiButton euiPrimary euiBlockButton euiStart>euiStart aligned</button>
+      <button euiButton euiPrimary euiBlockButton>centered (default)</button>
+      <button euiButton euiPrimary euiBlockButton euiEnd>euiEnd aligned</button>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  ELEMENT TYPES  ──────────────────────────── -->
+  <section>
+    <h3>Element types</h3>
+    <p class="hint">The directive matches both <code>button</code> and <code>a</code>.</p>
+    <div class="grid">
+      <button euiButton euiPrimary>&lt;button euiButton&gt;</button>
+      <a euiButton euiPrimary href="https://eui.ecdevops.eu" target="_blank" rel="noreferrer">
+        &lt;a euiButton href="…"&gt;
+      </a>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────  OUTPUT  ──────────────────────────── -->
+  <section class="output">
+    <h3><code>(buttonClick)</code> output</h3>
+    <p>Emits the <code>EuiButtonComponent</code> instance. Last click → <strong>{{ lastClick() }}</strong></p>
+  </section>
+</article>
